@@ -13,7 +13,8 @@ angular.module('formApp', [])
       $http({
         method: 'POST',
         url: $scope.url_enpoint,
-        data: $scope.payload
+        data: $scope.payload,
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
       }).then(function successCallback(response) {
           console.log('SUCCESS ');
           console.log(response);
